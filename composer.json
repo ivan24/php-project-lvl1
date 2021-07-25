@@ -1,0 +1,17 @@
+{
+    "name": "hexlet/code",
+    "description": "brain game application",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ivan areshkau",
+            "email": "bozercov@gmail.com"
+        }
+    ],
+    "require": {}
+}
