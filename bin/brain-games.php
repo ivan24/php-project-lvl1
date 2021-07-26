@@ -3,6 +3,6 @@
 
 use function Brain\Games\start_game;
 
-require dirname(__DIR__) . '/vendor/autoload.php';
+require dirname(__DIR__).'/vendor/autoload.php';
 
 start_game();
