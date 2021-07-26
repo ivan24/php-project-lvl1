@@ -13,9 +13,14 @@ install: ## install dependencies
 
 validate: ## run composer validate
 	composer validate
+lint: ## run linter
+	composer exec --verbose phpcs -- --standard=PSR12 src bin
 
 brain-game: ## run application
 	./bin/brain-games.php
+
+docker-run-lint: ## run linter in docker container
+	docker-compose run --rm php bash -c "composer exec --verbose phpcs -- --standard=PSR12 ./src ./bin"
 
 docker-run-validate: ## run composer validate in docker
 	docker-compose run --rm php validate
