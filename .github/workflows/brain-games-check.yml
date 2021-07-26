@@ -1,8 +1,25 @@
-name: hello-world
+name: Brain games PHP CI
 on: push
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+
+      # Check-out repository under GitHub workspace
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Action gives to setup the PHP environment to test application
+      # https://github.com/shivammathur/setup-ph
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+          with:
+            php-version: '8.0.8'
+
+      # Install project
+      - name: Install
+        run: make install
+
+      - name: Run linter
+        run: make lint
