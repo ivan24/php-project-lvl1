@@ -1,4 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-echo "Welcome to the Brain Games!\n";
+require dirname(__DIR__).'/vendor/autoload.php';
+
+Brain\Games\start_game();
