@@ -1,5 +1,8 @@
-name: Brain games PHP CI
-on: push
+name: PHP CI
+
+on:
+  - push
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +17,8 @@ jobs:
       # https://github.com/shivammathur/setup-ph
       - name: Setup PHP, with composer and extensions
         uses: shivammathur/setup-php@v2
-          with:
-            php-version: '8.0.8'
+        with:
+          php-version: '8.0.8'
 
       # Install project
       - name: Install
