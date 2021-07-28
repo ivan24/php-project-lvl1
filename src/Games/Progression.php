@@ -13,7 +13,7 @@ function create_progression(): array
         $correctAnswer = $progression[$hideItemKey];
         $progression[$hideItemKey] = '..';
 
-        $question = sprintf('Question %s', implode(' ', $progression));
+        $question = sprintf('Question: %s', implode(' ', $progression));
 
         return [$question, (string)$correctAnswer];
     };
