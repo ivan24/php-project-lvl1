@@ -8,7 +8,7 @@ function create_prime(): array
 {
     $greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $gcd = static function () {
+    $gcd = static function (): array {
         $number = generate_random(100);
         $question = "Question: $number";
         $correctAnswer = is_prime($number) ? 'yes' : 'no';

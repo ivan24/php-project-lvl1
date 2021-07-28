@@ -6,7 +6,7 @@ function create_progression(): array
 {
     $greeting = 'What number is missing in the progression?';
 
-    $progression = static function () {
+    $progression = static function (): array {
 
         $progression = generate_progression();
         $hideItemKey = array_rand($progression);

@@ -12,7 +12,7 @@ function create_calculator(): array
     };
     $greeting = 'What is the result of the expression?';
 
-    $calculator = static function () use ($fnGetRandomOperator) {
+    $calculator = static function () use ($fnGetRandomOperator): array {
 
         $operator = $fnGetRandomOperator();
         $first = generate_random(100);

@@ -8,7 +8,7 @@ function create_odd_or_even(): array
 {
     $greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $odd_or_even =  static function () {
+    $odd_or_even = static function (): array {
         $number = generate_random(120);
         $question = "Question: $number";
         $correctAnswer = is_oven($number) ? 'yes' : 'no';

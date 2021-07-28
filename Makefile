@@ -19,7 +19,7 @@ validate: ## run composer validate
 
 lint: ## run linter
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
-	composer exec --verbose phpstan analyse -- -c /app/phpstan.neon --ansi
+	composer exec --verbose phpstan analyse -- -c phpstan.neon --ansi
 
 brain-game: ## run brain-game
 	./bin/brain-games
