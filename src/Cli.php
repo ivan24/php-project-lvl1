@@ -18,7 +18,7 @@ function get_name(): string
     return prompt('May I have your name?');
 }
 
-function generate_random($to = 1000): int
+function generate_random(int $to = 1000): int
 {
     return random_int(0, $to);
 }

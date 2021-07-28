@@ -11,10 +11,15 @@ help:
 install: ## install dependencies
 	composer install
 
+phpstan: ## run phpstan checker
+	composer exec -v phpstan analyse -- -c /app/phpstan.neon --ansi
+
 validate: ## run composer validate
 	composer validate
+
 lint: ## run linter
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+	composer exec --verbose phpstan analyse -- -c /app/phpstan.neon --ansi
 
 brain-game: ## run brain-game
 	./bin/brain-games
@@ -27,17 +32,9 @@ brain-progression: ## run progression game
 
 brain-gcd: ## run gcd game
 	./bin/brain-gcd
+
 brain-even: ## run brain-even
 	./bin/brain-even
-
-docker-run-lint: ## run linter in docker container
-	docker-compose run --rm php bash -c "composer exec --verbose phpcs -- --standard=PSR12 ./src ./bin"
-
-docker-run-validate: ## run composer validate in docker
-	docker-compose run --rm php validate
-
-docker-run-install: ## install dependencies in docker
-	docker-compose run --rm php install
 
 docker-run-game: ## run game
 	docker-compose run --rm php bash -c "./bin/brain-${GAME}"
@@ -45,4 +42,4 @@ docker-run-game: ## run game
 start: ## run application
 	docker-compose run --rm --service-ports php /bin/bash
 
-.PHONY: install start help docker-game docker-install
+.PHONY: install start help docker-run-game phpstan brain-even brain-gcd brain-progression brain-calc brain-game

@@ -5,7 +5,7 @@ namespace Brain;
 use function cli\line;
 use function cli\prompt;
 
-function run_game(array $gameFabric)
+function run_game(array $gameFabric): void
 {
     $name = start_game();
     $successAttemptLimit = 3;
