@@ -12,6 +12,9 @@ $ git clone https://github.com/ivan24/php-project-lvl1.git
 
 $ make install OR make docker-run-install
 ```
-## Game odd or Even
+## Game odd or even
 [![asciicast](https://asciinema.org/a/uRv9uD2kUBowzdsv9Iz4rMsU8.png)](https://asciinema.org/a/uRv9uD2kUBowzdsv9Iz4rMsU8)
+
+##Game calculator
+[![asciicast](https://asciinema.org/a/h4H4vBzciYvHJbvUjFIfvRCQW.png)](https://asciinema.org/a/h4H4vBzciYvHJbvUjFIfvRCQW)
 
