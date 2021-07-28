@@ -19,6 +19,9 @@ lint: ## run linter
 brain-game: ## run brain-game
 	./bin/brain-games
 
+brain-calc: ## run calculator game
+	./bin/brain-calc
+
 brain-even: ## run brain-even
 	./bin/brain-even
 
@@ -31,13 +34,10 @@ docker-run-validate: ## run composer validate in docker
 docker-run-install: ## install dependencies in docker
 	docker-compose run --rm php install
 
-docker-run-brain-game: ## run brain-game in docker
-	docker-compose run --rm php bash -c "./bin/brain-games"
-
-docker-run-brain-even: ## run brain-even in docker
-	docker-compose run --rm php bash -c "./bin/brain-even"
+docker-run-game: ## run game
+	docker-compose run --rm php bash -c "./bin/brain-${GAME}"
 
 start: ## run application
 	docker-compose run --rm --service-ports php /bin/bash
 
-.PHONY: install start help docker-brain-game docker-install
+.PHONY: install start help docker-game docker-install

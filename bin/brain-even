@@ -5,4 +5,4 @@ use function Brain\Games\odd_or_even;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-odd_or_even();
+\Brain\run_game(odd_or_even());

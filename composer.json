@@ -3,17 +3,20 @@
     "description": "brain game application",
     "bin": [
         "bin/brain-games",
+        "bin/brain-calc",
         "bin/brain-even"
     ],
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Brain\\Games\\": "src/"
+            "Brain\\": "src/"
         },
         "files": [
             "src/Cli.php",
-            "src/OddOrEven.php"
+            "src/Engine.php",
+            "src/Games/Calculator.php",
+            "src/Games/OddOrEven.php"
         ]
     },
     "authors": [
