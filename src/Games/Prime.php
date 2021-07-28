@@ -20,6 +20,9 @@ function create_prime(): array
 
 function is_prime(int $number): bool
 {
+    if ($number < 2) {
+        return false;
+    }
     $max = ceil($number / 2);
     for ($i = 2; $i <= $max; $i++) {
         if ($number % $i === 0) {
