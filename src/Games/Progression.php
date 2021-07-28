@@ -24,9 +24,9 @@ function progression(): callable
 
 function generate_progression(): array
 {
-    $d = random_int(1, 100);
+    $d = random_int(1, 40);
     $length = random_int(5, 10);
-    $start = random_int(0, 100);
+    $start = random_int(0, 20);
     $progression = [$start];
     
     for ($i = 0; $i < $length; $i++) {

@@ -17,6 +17,7 @@ function run_game(callable $game)
         
         $answer = prompt($question);
 
+        line('Your answer: %s', $answer);
         if ($correctAnswer !== $answer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             line('Let\'s try again, %s!', $name);
