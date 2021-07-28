@@ -2,21 +2,21 @@
 
 namespace Brain\Games;
 
-use function cli\line;
 use function Brain\generate_random;
 
-function gcd(): callable
+function create_gcd(): array
 {
-    return static function () {
-        $greeting = 'Find the greatest common divisor of given numbers.';
+    $greeting = 'Find the greatest common divisor of given numbers.';
 
+    $gcd = static function () {
         $first = generate_random(100);
         $second = generate_random(100);
         $question = sprintf('Question: %d %d', $first, $second);
         $correctAnswer = calculate_gcd($first, $second);
 
-        return [$greeting, $question, (string)$correctAnswer];
+        return [$question, (string)$correctAnswer];
     };
+    return [$greeting, $gcd];
 }
 
 function calculate_gcd(int $a, int $b): int

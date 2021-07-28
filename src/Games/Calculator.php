@@ -2,18 +2,17 @@
 
 namespace Brain\Games;
 
-use function cli\line;
 use function Brain\generate_random;
 
-function calculator(): callable
+function create_calculator(): array
 {
     $operations = ['+', '-', '*'];
     $fnGetRandomOperator = static function () use ($operations) {
         return $operations[random_int(0, count($operations) - 1)];
     };
+    $greeting = 'What is the result of the expression?';
 
-    return static function () use ($fnGetRandomOperator) {
-        $greeting = 'What is the result of the expression?';
+    $calculator = static function () use ($fnGetRandomOperator) {
 
         $operator = $fnGetRandomOperator();
         $first = generate_random(100);
@@ -21,8 +20,9 @@ function calculator(): callable
         $question = sprintf('Question: %d %s %d', $first, $operator, $second);
         $correctAnswer = calculate($first, $second, $operator);
 
-        return [$greeting, $question, (string)$correctAnswer];
+        return [$question, (string)$correctAnswer];
     };
+    return [$greeting, $calculator];
 }
 
 function calculate(int $first, int $second, string $operator): int

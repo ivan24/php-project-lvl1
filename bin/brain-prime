@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\prime;
+use function Brain\Games\create_prime;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-\Brain\run_game(prime());
+\Brain\run_game(create_prime());

@@ -2,19 +2,21 @@
 
 namespace Brain\Games;
 
-use function cli\line;
 use function Brain\generate_random;
 
-function odd_or_even(): callable
+function create_odd_or_even(): array
 {
-    return static function () {
-        $greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+    $odd_or_even =  static function () {
         $number = generate_random(120);
         $question = "Question: $number";
         $correctAnswer = is_oven($number) ? 'yes' : 'no';
 
-        return [$greeting, $question, $correctAnswer];
+        return [$question, $correctAnswer];
     };
+
+    return [$greeting, $odd_or_even];
 }
 
 function is_oven(int $number): bool

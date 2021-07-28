@@ -2,24 +2,23 @@
 
 namespace Brain\Games;
 
-use function cli\line;
-use function Brain\generate_random;
-
-function progression(): callable
+function create_progression(): array
 {
-    return static function () {
+    $greeting = 'What number is missing in the progression?';
 
-        $greeting = 'What number is missing in the progression?';
+    $progression = static function () {
 
         $progression = generate_progression();
         $hideItemKey = array_rand($progression);
         $correctAnswer = $progression[$hideItemKey];
         $progression[$hideItemKey] = '..';
 
-        $question = sprintf('Question: %s', implode(' ', $progression));
+        $question = sprintf('Question %s', implode(' ', $progression));
 
-        return [$greeting, $question, (string)$correctAnswer];
+        return [$question, (string)$correctAnswer];
     };
+
+    return [$greeting, $progression];
 }
 
 function generate_progression(): array

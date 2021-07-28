@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\odd_or_even;
+use function Brain\Games\create_odd_or_even;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-\Brain\run_game(odd_or_even());
+\Brain\run_game(create_odd_or_even());

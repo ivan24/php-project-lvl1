@@ -4,16 +4,18 @@ namespace Brain\Games;
 
 use function Brain\generate_random;
 
-function prime(): callable
+function create_prime(): array
 {
-    return static function () {
-        $greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+    $gcd = static function () {
         $number = generate_random(100);
         $question = "Question: $number";
         $correctAnswer = is_prime($number) ? 'yes' : 'no';
 
-        return [$greeting, $question, $correctAnswer];
+        return [$question, $correctAnswer];
     };
+    return [$greeting, $gcd];
 }
 
 function is_prime(int $number): bool

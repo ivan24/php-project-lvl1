@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\progression;
+use function Brain\Games\create_progression;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-\Brain\run_game(progression());
+\Brain\run_game(create_progression());

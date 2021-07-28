@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\gcd;
+use function Brain\Games\create_gcd;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
-\Brain\run_game(gcd());
+\Brain\run_game(create_gcd());

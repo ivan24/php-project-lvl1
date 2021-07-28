@@ -5,15 +5,16 @@ namespace Brain;
 use function cli\line;
 use function cli\prompt;
 
-function run_game(callable $game)
+function run_game(array $gameFabric)
 {
     $name = start_game();
     $successAttemptLimit = 3;
     $attempt = 0;
+    [$greeting, $game] = $gameFabric;
+    line($greeting);
 
     while (true) {
-        [$greeting, $question, $correctAnswer] = $game();
-        line($greeting);
+        [$question, $correctAnswer] = $game();
 
         $answer = prompt($question);
 
