@@ -21,5 +21,8 @@ function create_gcd(): array
 
 function calculate_gcd(int $a, int $b): int
 {
+    if ($b === 0) {
+        return $a;
+    }
     return ($a % $b) ? calculate_gcd($b, $a % $b) : $b;
 }
