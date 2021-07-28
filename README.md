@@ -15,6 +15,16 @@ $ make install OR make docker-run-install
 ## Game odd or even
 [![asciicast](https://asciinema.org/a/uRv9uD2kUBowzdsv9Iz4rMsU8.png)](https://asciinema.org/a/uRv9uD2kUBowzdsv9Iz4rMsU8)
 
-##Game calculator
+## Game calculator
 [![asciicast](https://asciinema.org/a/h4H4vBzciYvHJbvUjFIfvRCQW.png)](https://asciinema.org/a/h4H4vBzciYvHJbvUjFIfvRCQW)
+
+## Game gcd
+[![asciicast](https://asciinema.org/a/c6xvt8MZqvFZLztMi6tZrWJ05.png)](https://asciinema.org/a/c6xvt8MZqvFZLztMi6tZrWJ05)
+
+## Game prime
+[![asciicast](https://asciinema.org/a/QSXCTMb6OOdTIWTrfZpK0o0K7.png)](https://asciinema.org/a/QSXCTMb6OOdTIWTrfZpK0o0K7)
+
+
+## Game progression
+[![asciicast](https://asciinema.org/a/5fenRGX8h0Lfzp1iCXoWMcGR9.png)](https://asciinema.org/a/5fenRGX8h0Lfzp1iCXoWMcGR9)
 
