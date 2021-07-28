@@ -14,7 +14,7 @@ function run_game(callable $game)
     while (true) {
         [$greeting, $question, $correctAnswer] = $game();
         line($greeting);
-        
+
         $answer = prompt($question);
 
         line('Your answer: %s', $answer);

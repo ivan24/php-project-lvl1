@@ -8,7 +8,7 @@ use function Brain\generate_random;
 function progression(): callable
 {
     return static function () {
-        
+
         $greeting = 'What number is missing in the progression?';
 
         $progression = generate_progression();
@@ -28,7 +28,7 @@ function generate_progression(): array
     $length = random_int(5, 10);
     $start = random_int(0, 20);
     $progression = [$start];
-    
+
     for ($i = 0; $i < $length; $i++) {
         $start += $d;
         $progression[] = $start;
