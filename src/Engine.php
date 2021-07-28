@@ -12,8 +12,9 @@ function run_game(callable $game)
     $attempt = 0;
 
     while (true) {
-        [$question, $correctAnswer] = $game();
-
+        [$greeting, $question, $correctAnswer] = $game();
+        line($greeting);
+        
         $answer = prompt($question);
 
         if ($correctAnswer !== $answer) {

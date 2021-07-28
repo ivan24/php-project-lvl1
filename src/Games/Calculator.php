@@ -13,7 +13,7 @@ function calculator(): callable
     };
 
     return static function () use ($fnGetRandomOperator) {
-        line('What is the result of the expression?');
+        $greeting = 'What is the result of the expression?';
 
         $operator = $fnGetRandomOperator();
         $first = generate_random(100);
@@ -21,7 +21,7 @@ function calculator(): callable
         $question = sprintf('Question: %d %s %d', $first, $operator, $second);
         $correctAnswer = calculate($first, $second, $operator);
 
-        return [$question, (string)$correctAnswer];
+        return [$greeting, $question, (string)$correctAnswer];
     };
 }
 
